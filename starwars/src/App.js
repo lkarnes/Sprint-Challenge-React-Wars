@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import CharecterData from './components/CharecterData';
-import styled from 'styled-components'
+
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out

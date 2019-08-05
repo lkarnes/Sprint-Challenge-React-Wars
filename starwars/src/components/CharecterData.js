@@ -8,21 +8,24 @@ const CardBox = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
-`
-
-CharacterData = () =>{
+`;
+function CharacterData(){
 const [people, setPeople] = useState([]);
 useEffect(()=>{
 axios.get(`https://swapi.co/api/people/`)
 .then((data)=>{
+    console.log(data.data.results)
  setPeople(data.data.results);
+})
+.catch(err =>{
+    console.log(err);
 })
 })
     return(
         <CardBox>
             {people.map(person =>{
     return <CharecterCard char={person.name} hgt={person.height}
-    skn={person.skin_color}/>
+    skn={person.skin_color} gnd={person.gender} hair={person.hair_color} year={person.birth_year}/>
 })}
         </CardBox>
     )
