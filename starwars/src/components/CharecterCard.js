@@ -7,6 +7,7 @@ width: 26%;
 margin: 20px;
 border: 3px solid black;
 border-radius: 10px;
+text-shadow: 2px 2px 5px white;
 `
 function CharacterCard({char, hgt , skn, gnd, hair, year}){
 if(!char) return(
